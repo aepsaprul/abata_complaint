@@ -42,7 +42,10 @@
     <button type="submit" class="border border-sky-400 bg-sky-500 w-full rounded-md py-2 text-white font-bold">Kirim</button>
   </div>
 </form>
+
 @if(session('status'))
-  <div class="text-lime-500 italic text-center m-2">{{ session('status') }}</div>
+  <div class="bg-emerald-500 text-white font-bold rounded fixed py-2 px-5 top-0 lg:top-10 lg:right-10 shadow-lg">
+    <div>{{ session('status') }}</div>
+  </div>
 @endif  
 @endsection
