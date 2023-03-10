@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
 
+Route::get('/', [ComplaintController::class, 'index'])->name('complaint');
 Route::get('complaint', [ComplaintController::class, 'index'])->name('complaint');
 Route::post('complaint/store', [ComplaintController::class, 'store'])->name('complaint.store');
+Route::get('complaint/{id}/show', [ComplaintController::class, 'show'])->name('complaint.show');
