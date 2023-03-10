@@ -34,7 +34,7 @@ class ComplaintController extends Controller
 
     return redirect()->route('complaint')->with('status', 'Terima kasih sudah membantu kami untuk terus memberikan pelayanan terbaik.');
   }
-  public function show($id)
+  public function cabang($id)
   {
     $cabang = MasterCabang::where('id', $id)->where('grup', 'abata')->first();
 
