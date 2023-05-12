@@ -23,7 +23,7 @@
   </div>
   <div>
     <select name="cabang_id" id="cabang_id" class="@error('cabang_id') is-invalid @enderror border border-sky-500 rounded py-1 px-2 my-1 w-full" required>
-      <option value="">Pilih Cabang</option>
+      <option value="">-Pilih Cabang-</option>
       @foreach ($cabang as $item)
         <option value="{{ $item->id }}">{{ $item->nama_cabang }}</option>
       @endforeach
